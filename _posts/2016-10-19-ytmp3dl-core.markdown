@@ -6,7 +6,7 @@ categories: projects
 oneline: Reverse engineered Google's media signature enciphering. Ytmp3dl is an asynchronous power Node.js Youtube mp3 downloader module utilizing some of the latest (proposed) ECMAScript features.
 ---
 
-Async YouTube power mp3 downloader. Utilizing ES6 and ES7 features.
+Ytmp3dl is an asynchronous power Node.js Youtube mp3 downloader module utilizing some of the latest (proposed) ECMAScript features.
 
 [![Build Status](https://travis-ci.org/opensoars/ytmp3dl-core.svg?branch=master)](https://travis-ci.org/opensoars/ytmp3dl-core)
 
