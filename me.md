@@ -41,7 +41,7 @@ At the moment I'm mainly focussing on studying. Nevertheless, I'm always up for 
 
 Besides all the tech stuff: I'm in my early twenties, I'm social, I love nature, travelling and (creating) music. Currently im located in the Netherlands.
 
-Here's a picture of me which I used whilst experimenting with fragment shaders. The shader used on this image was used to make videos look like an oldschool movie. The effects of the shader were imitating materialilstic imperfections due to for example dust particles.
+Here's a picture of me which I used whilst experimenting with fragment shaders. The shader used on this image was used to make videos look like an oldschool movie. The effects of the shader were imitating video tape imperfections due to for example dust particles.
 
 {:.me}
 ![me-shaders](/portfolio/assets/img/me-shaders.jpg)
