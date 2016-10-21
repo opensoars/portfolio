@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sam | Portfolio</title>
+    <description>I&#39;m Sam, a serious tech head. I love to talk code and stuff.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 21 Oct 2016 03:24:42 +0200</pubDate>
+    <lastBuildDate>Fri, 21 Oct 2016 03:24:42 +0200</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>base</title>
+        <description>&lt;p&gt;Easy to use base conversion command line tool and Node.js (native) module. Offers JavaScript and C++ implementations.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://inch-ci.org/github/opensoars/base&quot;&gt;&lt;img src=&quot;https://inch-ci.org/github/opensoars/base.svg?branch=master&quot; alt=&quot;Inline docs&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://travis-ci.org/opensoars/base&quot;&gt;&lt;img src=&quot;https://travis-ci.org/opensoars/base.svg&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/r/opensoars/base?branch=master&quot;&gt;&lt;img src=&quot;https://coveralls.io/repos/opensoars/base/badge.svg?branch=master&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/base&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/base.svg?style=flat&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/base#info=devDependencies&amp;amp;view=table&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/base/dev-status.svg?style=flat&quot; alt=&quot;Development Dependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JS implementation
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;C++ Implementation
+    &lt;ul&gt;
+      &lt;li&gt;C++ compiler toolchain&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/TooTallNate/node-gyp&quot;&gt;node-gyp&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Node.js modules
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/rvagg/nan&quot;&gt;nan&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/TooTallNate/node-bindings&quot;&gt;node-bindings&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Clone source&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;To use C++ implementations: &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run build&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&quot;cli&quot;&gt;CLI&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ base from to data implementation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;from&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; are bases to convert between, &lt;code class=&quot;highlighter-rouge&quot;&gt;input&lt;/code&gt; is the data to convert and &lt;code class=&quot;highlighter-rouge&quot;&gt;implementation&lt;/code&gt; is a known implementation (js, cpp). &lt;code class=&quot;highlighter-rouge&quot;&gt;from&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; are required. &lt;code class=&quot;highlighter-rouge&quot;&gt;implementation&lt;/code&gt; is optional, defaults to cpp.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ base 2 10 &quot;0101001101010101&quot; js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;in-a-nodejs-project&quot;&gt;In a Node.js project&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;base = require(&#39;base&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;api&quot;&gt;API&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;base.api(from, to, input, implementation)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;from&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; are bases to convert between, &lt;code class=&quot;highlighter-rouge&quot;&gt;input&lt;/code&gt; is the data to convert and &lt;code class=&quot;highlighter-rouge&quot;&gt;implementation&lt;/code&gt; is a known implementation (js, cpp). &lt;code class=&quot;highlighter-rouge&quot;&gt;from&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; are required. &lt;code class=&quot;highlighter-rouge&quot;&gt;implementation&lt;/code&gt; is optional, defaults to cpp.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;base.api(10, 16, 255, &#39;js&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;raw&quot;&gt;Raw&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;base[from][implementation][to](input)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;from&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; are bases to convert between, &lt;code class=&quot;highlighter-rouge&quot;&gt;input&lt;/code&gt; is the data to convert and &lt;code class=&quot;highlighter-rouge&quot;&gt;implementation&lt;/code&gt; is a known implementation (js, cpp).&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;base[10][&#39;cpp&#39;][16](255)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;tests-and-coverage-information&quot;&gt;Tests and coverage information&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; npm run local_test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 20:27:32 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/base.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/base.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>ytmp3dl-core</title>
+        <description>&lt;p&gt;Async YouTube power mp3 downloader. Utilizing ES6 and ES7 features.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/ytmp3dl-core&quot;&gt;&lt;img src=&quot;https://travis-ci.org/opensoars/ytmp3dl-core.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!---
+[![Coverage Status](https://coveralls.io/repos/opensoars/ytmp3dl-core/badge.svg?branch=master&amp;service=github)](https://coveralls.io/github/opensoars/ytmp3dl-core?branch=master)
+[![Inline docs](http://inch-ci.org/github/opensoars/ytmp3dl-core.svg?branch=master)](http://inch-ci.org/github/opensoars/ytmp3dl-core)
+[![Codacy Badge](https://api.codacy.com/project/badge/f3e64501763645b9aa483bf83a4dd1d5)](https://www.codacy.com/app/sam_1700/ytmp3dl-core)
+[![Code Climate](https://codeclimate.com/github/opensoars/ytmp3dl-core/badges/gpa.svg)](https://codeclimate.com/github/opensoars/ytmp3dl-core)
+[![Dependency Status](https://david-dm.org/opensoars/ytmp3dl-core.svg)](https://david-dm.org/opensoars/ytmp3dl-core)
+[![devDependency Status](https://david-dm.org/opensoars/ytmp3dl-core/dev-status.svg)](https://david-dm.org/opensoars/ytmp3dl-core#info=devDependencies)
+--&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;install&quot;&gt;Install&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install ytmp3dl-core&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;use&quot;&gt;Use&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;ytmp3dl-core&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;NnTg4vzli5s&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;callMethod&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callMethod&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;stream-progress&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;stream-progress&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;conversion-progress&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;conversion-progress&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;error&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;error&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;succes&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;succes&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;start&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 19 Oct 2016 20:27:31 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/ytmp3dl-core.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/ytmp3dl-core.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>raminfo</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/raminfo&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/opensoars/raminfo.svg?style=flat&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/r/opensoars/raminfo&quot;&gt;&lt;img src=&quot;https://img.shields.io/coveralls/opensoars/raminfo.svg?style=flat&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/raminfo&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/raminfo.svg?style=flat&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/raminfo#info=devDependencies&amp;amp;view=table&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/raminfo/dev-status.svg?style=flat&quot; alt=&quot;Development Dependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.js module which can be used to log and dump memory info.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/opensoars/ezlog&quot;&gt;ezlog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install raminfo&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;api&quot;&gt;API&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;raminfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;raminfo&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;raminfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;// Used so we can do some benchmarks&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Where to dump the memory information&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;dumpDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./raminfoDump&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Log when dumping a file&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;logDumpFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;// Dump a memory info file&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;raminfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Log about memory infomation&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;raminfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Get a JSON object containing readable memory information&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;raminfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 20:27:30 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/raminfo.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/raminfo.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>cls</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://inch-ci.org/github/opensoars/cls&quot;&gt;&lt;img src=&quot;https://inch-ci.org/github/opensoars/cls.svg?branch=master&quot; alt=&quot;Inline docs&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://codeclimate.com/github/opensoars/cls&quot;&gt;&lt;img src=&quot;https://codeclimate.com/github/opensoars/cls/badges/gpa.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://travis-ci.org/opensoars/cls&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/opensoars/cls.svg?style=flat&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/r/opensoars/cls&quot;&gt;&lt;img src=&quot;https://img.shields.io/coveralls/opensoars/cls.svg?style=flat&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://david-dm.org/opensoars/cls&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/cls.svg?style=flat&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/cls#info=devDependencies&amp;amp;view=table&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/cls/dev-status.svg?style=flat&quot; alt=&quot;Development Dependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.js module for easy command line text styling.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install opensoars_cls&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;api&quot;&gt;API&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cls(text, [color], [style])&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;text&lt;/code&gt; is the string or object to style, &lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; is an optional color string and &lt;code class=&quot;highlighter-rouge&quot;&gt;style&lt;/code&gt; is an optional style string or an array of style strings.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;opensoars_cls&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Hello, world!&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;red&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;bold&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;underline&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;styled_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;options&quot;&gt;Options&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;9 Colors
+    &lt;ul&gt;
+      &lt;li&gt;white&lt;/li&gt;
+      &lt;li&gt;grey&lt;/li&gt;
+      &lt;li&gt;black&lt;/li&gt;
+      &lt;li&gt;blue&lt;/li&gt;
+      &lt;li&gt;cyan&lt;/li&gt;
+      &lt;li&gt;green&lt;/li&gt;
+      &lt;li&gt;magenta&lt;/li&gt;
+      &lt;li&gt;red&lt;/li&gt;
+      &lt;li&gt;yellow&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;5 Styles (if supported by your OS its terminal)
+    &lt;ul&gt;
+      &lt;li&gt;bold&lt;/li&gt;
+      &lt;li&gt;italic&lt;/li&gt;
+      &lt;li&gt;underline&lt;/li&gt;
+      &lt;li&gt;inverse&lt;/li&gt;
+      &lt;li&gt;strikethrough&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 20:27:30 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/cls.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/cls.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>ens</title>
+        <description>&lt;p&gt;Easily ensure JavaScript data types.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/ens&quot;&gt;&lt;img src=&quot;https://travis-ci.org/opensoars/ens.svg&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/github/opensoars/ens?branch=master&quot;&gt;&lt;img src=&quot;https://coveralls.io/repos/opensoars/ens/badge.svg?branch=master&amp;amp;service=github&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;http://inch-ci.org/github/opensoars/ens&quot;&gt;&lt;img src=&quot;http://inch-ci.org/github/opensoars/ens.svg?branch=master&quot; alt=&quot;Inline docs&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.codacy.com/app/sam_1700/ens&quot;&gt;&lt;img src=&quot;https://api.codacy.com/project/badge/f3e64501763645b9aa483bf83a4dd1d5&quot; alt=&quot;Codacy Badge&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://codeclimate.com/github/opensoars/ens&quot;&gt;&lt;img src=&quot;https://codeclimate.com/github/opensoars/ens/badges/gpa.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/ens&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/ens.svg&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/ens#info=devDependencies&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/ens/dev-status.svg&quot; alt=&quot;devDependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Ensure variable `obj` is an object, the traditional way&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;object&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Ensure variable obj is an object, using ens.obj&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ens&lt;/code&gt; makes it easy to ensure JS data types. With JS, ensuring data types requires a lot of ugly code. It’s easy to specify variable defaults though: &lt;code class=&quot;highlighter-rouge&quot;&gt;obj = obj || {}&lt;/code&gt;. The problem with this pattern is, when &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt; is set to a value which evaluates to true, the default value &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt; won’t be bound to &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt;. This is where &lt;code class=&quot;highlighter-rouge&quot;&gt;ens&lt;/code&gt; comes in: &lt;code class=&quot;highlighter-rouge&quot;&gt;obj = ens.obj(obj)&lt;/code&gt;. Which results in the binding of an object to &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt; no mather what type of data &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt; is.&lt;/p&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install ens&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;use&quot;&gt;Use&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;ens&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// []&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// []&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// [1, 2]&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;boo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;boo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;boo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;                   &lt;span class=&quot;c1&quot;&gt;// function () {}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;// function () {}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{});&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// function test () {}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 5&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;// {}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// {}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;b&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// {a: &#39;b&#39;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// &#39;&#39;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({});&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// &#39;&#39;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;test&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &#39;test&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 18:27:32 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/welcome-to-jekyll.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>f_</title>
+        <description>&lt;p&gt;Async and modular application development made easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/f_&quot;&gt;&lt;img src=&quot;https://travis-ci.org/opensoars/f_.svg&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/github/opensoars/f_?branch=master&quot;&gt;&lt;img src=&quot;https://coveralls.io/repos/opensoars/f_/badge.svg?branch=master&amp;amp;service=github&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;http://inch-ci.org/github/opensoars/f_&quot;&gt;&lt;img src=&quot;http://inch-ci.org/github/opensoars/f_.svg?branch=master&quot; alt=&quot;Inline docs&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.codacy.com/app/sam_1700/f_&quot;&gt;&lt;img src=&quot;https://api.codacy.com/project/badge/f3e64501763645b9aa483bf83a4dd1d5&quot; alt=&quot;Codacy Badge&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://codeclimate.com/github/opensoars/f_&quot;&gt;&lt;img src=&quot;https://codeclimate.com/github/opensoars/f_/badges/gpa.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/f_&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/f_.svg&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/f_#info=devDependencies&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/f_/dev-status.svg&quot; alt=&quot;devDependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install f_&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;use&quot;&gt;Use&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;f_&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;task_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getConstructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;function_flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;method1&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f_next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;method2&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f_next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For more information, check out the full documentation &lt;a href=&quot;https://github.com/opensoars/f_/tree/master/doc/pdf&quot;&gt;here&lt;/a&gt; or the documentation generated by JSDoc &lt;a href=&quot;https://opensoars.github.io/f_/jsdoc&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 18:27:32 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/19/f_.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/19/f_.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>reqqer</title>
+        <description>&lt;p&gt;Node.js requires made easy (pre es6).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/reqqer&quot;&gt;&lt;img src=&quot;https://travis-ci.org/opensoars/reqqer.svg&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/github/opensoars/reqqer?branch=master&quot;&gt;&lt;img src=&quot;https://coveralls.io/repos/opensoars/reqqer/badge.svg?branch=master&amp;amp;service=github&amp;amp;bust=1&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;http://inch-ci.org/github/opensoars/reqqer&quot;&gt;&lt;img src=&quot;http://inch-ci.org/github/opensoars/reqqer.svg?branch=master&amp;amp;bust=1&quot; alt=&quot;Inline docs&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.codacy.com/app/sam_1700/reqqer&quot;&gt;&lt;img src=&quot;https://api.codacy.com/project/badge/f3e64501763645b9aa483bf83a4dd1d5&quot; alt=&quot;Codacy Badge&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://codeclimate.com/github/opensoars/reqqer&quot;&gt;&lt;img src=&quot;https://codeclimate.com/github/opensoars/reqqer/badges/gpa.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/reqqer&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/reqqer.svg&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/reqqer#info=devDependencies&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/reqqer/dev-status.svg&quot; alt=&quot;devDependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install reqqer&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;use&quot;&gt;Use&lt;/h2&gt;
+
+&lt;p&gt;ES 2015&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Using an object&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;reqqer&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;https&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http&#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Using an array&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;reqqer&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;https&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reqs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reqs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;ES 2016&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Using an object&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;reqqer&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;https&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http&#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Using an array&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;reqqer&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;https&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run doc&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;doc/jsdoc/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tests-and-code-coverage&quot;&gt;Tests and code coverage&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run local_test&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;coverage/lcov-report/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/opensoars/reqqer&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd reqqer&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 18 Oct 2016 18:27:32 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/18/reqqer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/18/reqqer.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>poll</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/opensoars/poll&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/opensoars/poll.svg?style=flat&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://coveralls.io/r/opensoars/poll&quot;&gt;&lt;img src=&quot;https://img.shields.io/coveralls/opensoars/poll.svg?style=flat&quot; alt=&quot;Coverage Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/poll&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/poll.svg?style=flat&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://david-dm.org/opensoars/poll#info=devDependencies&amp;amp;view=table&quot;&gt;&lt;img src=&quot;https://david-dm.org/opensoars/poll/dev-status.svg?style=flat&quot; alt=&quot;Development Dependency Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.strawpoll.me/&quot;&gt;Strawpoll.me&lt;/a&gt; rip (created in a couple of hours).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;use&quot;&gt;Use&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Clone source&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run server&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Browse to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:80&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Poll away!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;run-tests-to-get-build-status-and-coverage-report&quot;&gt;Run tests to get build status and coverage report&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Clone source&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run localTest&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 18 Oct 2016 18:27:32 +0200</pubDate>
+        <link>http://localhost:4000/projects/2016/10/18/poll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/10/18/poll.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+  </channel>
+</rss>

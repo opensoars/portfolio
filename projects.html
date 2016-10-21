@@ -1,0 +1,41 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+order: 1
+---
+
+<div class="home">
+
+  <header class="post-header">
+    <h1 class="post-title">Projects</h1>
+  </header>
+
+  <article>
+    <p>This is the place to see some of my work. I've worked on both <a href="https://opensoars.github.io">open</a> and closed source projects. Recently most of my projects have been closed source. Some of my open source projects are rather old, when I look back at them I always feel the need to improve almost everything (if only I had more time), which of course is a good sign!</p>
+    <h2>Open source</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <p>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {{ post.oneline }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+    <h2>Closed source</h2>
+    <ul class=" post-list-closed">
+      <li>Efficient development environment set-up for a few small starting companies</li>
+      <li>3D photo gallery for a photographer</li>
+      <li>In the past: various kinds of (basic) websites</li>
+      <li>Development and installation of a custom home automation system</li>
+      <li>Development and maintainence of custom development tools for various companies</li>
+      <li>Currently in development: next-gen x-platform drawing and animation tool</li>
+      <li>Currently in development: a better way to start with programming (at any age)</li>
+    </ul>
+  </article>
+
+<!--   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+</div>

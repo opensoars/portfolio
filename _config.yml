@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Sam | Portfolio
+email: sam.opensoars@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  I'm Sam, a serious tech head. I love to talk code and stuff.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
+github_username:  opensoars
+
+# Build settings
+markdown: kramdown

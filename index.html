@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="home">
+  <header class="post-header">
+    <h1 class="post-title">Hello, I'm Sam!</h1>
+  </header>
+
+  <article>
+    <p>
+      And I love technology. This is my personal portfolio website, here you can find out more about <a href="/me">me</a>, as well as <a href="/interests">my passion for technology</a> (summed up in a list) or you can check out <a href="/projects">some of my work</a>.
+    </p>
+    <div class="custom-code">
+{% highlight erlang %}
+drink([]) -> drink(getDrinks());
+drink([H | T]) ->
+  case H of
+    coffee -> [work() | drink(T)];
+    beer -> [wrko() | drink(T)];
+  end.
+{% endhighlight %}
+    </div>
+    <p>
+      You can get in touch with me via <a href="mailto:sam.opensoars@gmail.com">e-mail</a>, I can also be found on <a href="https://github.com/opensoars">GitHub</a>.
+    </p>
+
+  </article>
+</div>
