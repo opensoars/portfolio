@@ -9,7 +9,7 @@
 title: Sam | Portfolio
 email: sam.opensoars@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm Sam, a serious tech head. I love to talk code and stuff.
+  I'm Sam, a serious tech head with experience in, and a passion for, a lot of Computer Science related fields.
 baseurl: "/portfolio" # the subpath of your site, e.g. /blog
 url: "https://opensoars.github.io" # the base hostname & protocol for your site
 github_username:  opensoars
