@@ -9,7 +9,7 @@ layout: default
 
   <article>
     <p>
-      And I love technology. This is my personal portfolio website, here you can find out more about <a href="/me">me</a>, as well as <a href="/interests">my passion for technology</a> (summed up in a list) or you can check out <a href="/projects">some of my work</a>.
+      And I love technology. This is my personal portfolio website, here you can find out more about <a href="{{ /me | prepend: site.baseurl }}">me</a>, as well as <a href="/{{ /interests | prepend: site.baseurl }}">my passion for technology</a> (summed up in a list) or you can check out <a href="{{ /projects | prepend: site.baseurl }}">some of my work</a>.
     </p>
     <div class="custom-code">
 {% highlight erlang %}
