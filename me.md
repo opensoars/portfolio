@@ -42,7 +42,7 @@ Besides all the tech stuff: I'm in my early twenties, I love nature and travelli
 
 Here's a picture of me which I used whilst experimenting with fragment shaders. The shader used on this image was used to make videos look like an oldschool movie. The effects of the shader were imitating materialilstic imperfections due to for example dust particles.
 
-{:.me}
+{:.me .working}
 ![me-shaders](/portfolio/assets/img/me-shaders.jpg)
 
 I love to write code for fun that utilizes features which aren't normaly used for a specific purpose, JavaScript is a great language for this. Take for example the lazy evaluation demo below, which utilizes the `undefined` value that a `forEach` method returns. It also demonstrates the use of default arguments in order to put a variable in a function its scope.
