@@ -17,13 +17,14 @@ Currently I'm mainly focussing on improving the following of my skills:
 - Math
 - Functional programming
 - ES7+
+- GPGPU
 - OpenGL
 - WebGL
 - GLSL
 - C# (language used at university)
 - Embedded systems
 - Electronics
-- Artificial intelligence
+- Artificial neural networks / deep learning
 
 Some of the skills I always improve on the side:
 
