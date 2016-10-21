@@ -4,7 +4,7 @@ title: Interests
 permalink: /interests/
 ---
 
-Here's a (forever incomplete) list of my technological interests. **Bold** text indicates that I've got experience with the technology.
+Here's a (forever incomplete) list of my Computer Science related interests. **Bold** text indicates that I've got experience with the technology.
 
 - **Embedded systems**
 - Electronics / hardware
