@@ -46,7 +46,7 @@ Here's a picture of me which I used whilst experimenting with fragment shaders. 
 {:.me}
 ![me-shaders](/portfolio/assets/img/me-shaders.jpg)
 
-I love to write code for fun that utilizes language features which aren't always obvious without prior experimentation/experience. Take for example the lazy evaluation JavaScript demo below, which utilizes the `undefined` value that a `forEach` method returns. It also demonstrates the use of default arguments in order to put a variable in a function its scope.
+I love to write code for fun that utilizes language features which aren't always obvious without prior experience and or experimentation. Take for example the lazy evaluation JavaScript demo below, which utilizes the `undefined` value that a `forEach` method returns. It also demonstrates the use of default arguments in order to put a variable in a function its scope.
 
 {:.custom-code}
 {% highlight javascript %}
