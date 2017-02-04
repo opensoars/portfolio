@@ -32,7 +32,7 @@ Some of the skills I always improve on the side:
 - Software architecture design
 - Collaboration (through maintainability)
 
-Regarding the current educational cource I'm following; I study Computer Science in Leeuwarden, at the NHL Hogeschool, my mentor there is Fiona Sariedine and I'm in group 1B. My previous study, which I completed in July 2016, was Application Development at the Friesland College institute. I'm planning to study abroad in the near future, feel free to let me know if you've got tips.
+Regarding the current educational cource I'm following; I study Computer Science in Leeuwarden, at the NHL Hogeschool. My previous study, which I completed in July 2016, was Application Development at the Friesland College institute. I'm planning to study abroad in the near future, feel free to let me know if you've got tips.
 
 
 At the moment I'm mainly focussing on studying. Nevertheless, I'm always up for special projects to work on, so if you want me to help you with that special kind of (tech) project, don't hesitate to contact me!
