@@ -62,7 +62,7 @@ Whether I write code like the above or not depends on the situation. Taking thin
 
 {:.custom-code}
 {% highlight javascript %}
-const make_lazy = function makeLazy(f) {
+const makeLazy = function makeLazy(f) {
   return function recurse(...args) {
     return function (...newArgs) {
       if (newArgs.length === 0)
