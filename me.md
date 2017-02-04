@@ -73,7 +73,7 @@ const makeLazy = function makeLazy(f) {
   };
 };
 
-const add = (nums) => {
+const add = function add(nums) {
   let sum = 0;
   nums.forEach(num => sum += num);
   return sum;
